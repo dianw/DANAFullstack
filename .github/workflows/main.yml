@@ -21,14 +21,12 @@ jobs:
       - name: Build and push senggol backend
         uses: docker/build-push-action@v2
         with:
-          context: senggol
-          file: Dockerfile
+          context: ./senggol
           push: true
           tags: dianw/senggol-backend:latest
       - name: Build and push senggol frontend
         uses: docker/build-push-action@v2
         with:
-          context: senggol-frontend
-          file: Dockerfile
+          context: ./senggol-frontend
           push: true
           tags: dianw/senggol-frontend:latest
